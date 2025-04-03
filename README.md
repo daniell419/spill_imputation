@@ -48,9 +48,13 @@ Spill_results$ATOTT     # Treated group effects by time
 Spill_results$ASEU      # Spillover effects on untreated by time
 Spill_results$tau_pred  # Difference between predicted and observed outcome
 ```
+### 3) Plotting 
+The package also provides a function to plot the dynamic effects of both the ATOTT and the ASEU. The function `simulate_panel_data()` returns a ggplot object that can be modified. 
+```r
+plot_spill_estimates(Spill_results, treatment_time=4, title = "Spillover Imputation Estimates")
+```
 
-
-
+![image](https://github.com/user-attachments/assets/85de7696-87fc-4e72-baa3-3bf8b0bbdcca)
 
 
 <h1>Technical Overview</h1>
