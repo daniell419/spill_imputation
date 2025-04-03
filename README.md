@@ -10,10 +10,10 @@ You can install the development version of `spillimputation` from GitHub using:
 
 ```r
 devtools::install_github("daniell419/spillimputation")
+library(spillimputation)
 ```
 ## 🔢 Example
 ```r
-library(spillimputation)
 # Simulate the spillover data
 df_sim <- simulate_spillover_data()
 ```
