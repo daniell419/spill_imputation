@@ -33,7 +33,7 @@ The dataset produced by `simulate_panel_data()` is a **balanced panel** of `n_un
 
 
 ### 2) Spill-imputation Function Application
-The function requeieres the names of the outcome variable, the binary definition of the treated group, a label for the not-exposed cohort, time and id indicators and the value of the treatment time (i.e. 2014, 4, etc). It returns a dataframe of the estimates of the ATOTT and ASEUT by year. 
+The function requeieres the names of the outcome variable, the binary definition of the treated group, a label for the not-exposed cohort, time and id indicators and the value of the treatment time. It returns a dataframe of the estimates of the ATOTT and ASEUT by year. Also, a vector with the individual treatment effects to explore heterogeneity. 
 ```r
 Spill_results <- spill_imputation(
   data = df_sim,
