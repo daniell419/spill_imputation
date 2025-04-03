@@ -57,13 +57,13 @@ spill_imputation <- function(data, yname, treated, never_name, tname, idname, tr
 
   # Create indicator for non-exposed periods
   df <- df %>%
-    mutate(not_exposed = ifelse((!!sym(never_name) == 1 & !!sym(treated) == 0) | !!sym(tname) < treatment_time, 1, 0))
+    mutate(ZZZ_group_not_exposed = ifelse((!!sym(never_name) == 1 & !!sym(treated) == 0) | !!sym(tname) < treatment_time, 1, 0))
 
   # Estimate model on not-exposed observations
   first_stage_est <- fixest::feols(
     fml = formula,
     se = "standard",
-    data = df %>% filter(not_exposed == 1),
+    data = df %>% filter(ZZZ_group_not_exposed == 1),
     warn = FALSE, notes = FALSE
   )
 
