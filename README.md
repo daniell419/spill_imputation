@@ -54,7 +54,7 @@ The package also provides a function to plot the dynamic effects of both the ATO
 plot_spill_estimates(Spill_results, treatment_time=4, title = "Spillover Imputation Estimates")
 ```
 
-![image](https://github.com/user-attachments/assets/85de7696-87fc-4e72-baa3-3bf8b0bbdcca)
+![image](https://github.com/user-attachments/assets/e0f561f5-799b-4455-b8e5-2d2dcce0b587)
 
 
 <h1>Technical Overview</h1>
