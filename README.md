@@ -32,6 +32,28 @@ The dataset produced by `simulate_panel_data()` is a **balanced panel** of `n_un
 | `time`        | `integer`| Time period identifier ranging from 1 to `n_periods`. |
 | `treat_group` | `integer`| Indicator equal to 1 if the unit belongs to the treated group (by default, the first half of units), and 0 otherwise. Treatment starts at the specified `treatment_period`. |
 
+<h2>Function Application</h2>
+
+```r
+SpilL_results <- spill_imputation(
+  data = df,
+  yname = "y",
+  treated = "treat_group",
+  never_name = "not_exposed_group",
+  tname = "time",
+  idname = "id",
+  treatment_time = 4
+)
+
+SpilL_results$ATOTT     # Treated group effects by time
+SpilL_results$ASEU      # Spillover effects on untreated by time
+SpilL_results$tau_pred  # Difference between predicted and observed outcome
+```
+
+
+
+
+
 <h2>Description</h2>
 <p>
 Rather than assuming a specific functional form for spillover exposure, this method estimates the untreated potential outcome 
