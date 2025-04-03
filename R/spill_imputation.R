@@ -103,7 +103,3 @@ spill_imputation <- function(data, yname, treated, never_name, tname, idname, tr
     tau_pred = df[[tau_name]]
   ))
 }
-
-
-devtools::document()
-?spill_imputation
