@@ -35,10 +35,10 @@ The dataset produced by `simulate_panel_data()` is a **balanced panel** of `n_un
 
 ```r
 Spill_results <- spill_imputation(
-  data = df,
+  data = df_sim,
   yname = "y",
   treated = "treat_group",
-  never_name = "not_exposed_group",
+  never_name = "not_exposed",
   tname = "time",
   idname = "id",
   treatment_time = 4
