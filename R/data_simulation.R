@@ -24,7 +24,7 @@
 #' head(df)
 #'
 #' @export
-simulate_panel_data <- function(n_units = 500,
+simulate_spillover_data <- function(n_units = 500,
                                 n_periods = 6,
                                 treatment_period = 4,
                                 treatment_effect = 5,
@@ -78,6 +78,4 @@ simulate_panel_data <- function(n_units = 500,
 
   return(df)
 }
-
-
 
