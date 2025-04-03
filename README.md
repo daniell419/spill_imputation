@@ -9,9 +9,51 @@ This package implements a difference-in-differences estimator that accounts for 
 You can install the development version of `spillimputation` from GitHub using:
 
 ```r
-devtools::install_github("daniell419/spillimputation")
+devtools::install_github("daniell419/spill_imputation")
+library(spillimputation)
 ```
-<h2>Description</h2>
+## 🔢 Example
+
+### 1) 📄 Simulate a Dataset with spillovers
+```r
+# Simulate the spillover data
+df_sim <- simulate_spillover_data()
+```
+The dataset produced by `simulate_panel_data()` is a **balanced panel** of `n_units × n_periods` observations. Each row represents a unit (`id`) observed at a particular time period (`time`). The data is designed to simulate a difference-in-differences (DiD) setup with spillover effects and fixed effects. 
+
+#### **Columns**
+
+| Column        | Type     | Description |
+|---------------|----------|-------------|
+| `y`           | `double` | Simulated outcome variable. It is constructed as a function of unit and time fixed effects, a treatment effect (applied only post-treatment for treated units), spillover effects from treated friends, and random noise. |
+| `not_exposed` | `integer`| Indicator variable equal to 1 if a unit is unexposed and untreated throughout **all** time periods (i.e., is not exposed to any spillover effects). |
+| `id`          | `integer`| Unique identifier for each unit (e.g., individual, firm, region). |
+| `time`        | `integer`| Time period identifier. |
+| `treat_group` | `integer`| Indicator equal to 1 if the unit belongs to the treated group, and 0 otherwise. Treatment starts at the specified `treatment_period` (default is 4). |
+
+### 2) Spill-imputation Function Application
+
+```r
+Spill_results <- spill_imputation(
+  data = df_sim,
+  yname = "y",
+  treated = "treat_group",
+  never_name = "not_exposed",
+  tname = "time",
+  idname = "id",
+  treatment_time = 4
+)
+
+Spill_results$ATOTT     # Treated group effects by time
+Spill_results$ASEU      # Spillover effects on untreated by time
+Spill_results$tau_pred  # Difference between predicted and observed outcome
+```
+
+
+
+
+
+<h1>Technical Overview</h1>
 <p>
 Rather than assuming a specific functional form for spillover exposure, this method estimates the untreated potential outcome 
 <span style="font-family:monospace;">Y<sub>it</sub>(0)</span> using a two-way fixed effects regression on never-exposed and not-yet-treated units. 
