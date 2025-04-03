@@ -9,7 +9,7 @@ This package implements a difference-in-differences estimator that accounts for 
 You can install the development version of `spillimputation` from GitHub using:
 
 ```r
-devtools::install_github("daniell419/spillimputation")
+devtools::install_github("daniell419/spill_imputation")
 library(spillimputation)
 ```
 ## 🔢 Example
