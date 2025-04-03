@@ -2,6 +2,20 @@
 
 This package implements a difference-in-differences estimator that accounts for **spillover effects**. It extends the imputation method from Borusyak, Jaravel, and Spiess (2021) by identifying a subset of **not-exposed** and **not-treated** units to estimate counterfactual untreated and unexposed outcomes. The estimator does not requiere to a-priori know the structure of the spillvoers propagation. 
 
+# spillimputation
+
+The goal of **spillimputation** is to estimate treatment and spillover effects in a difference-in-differences framework using an imputation-based approach.  
+It extends the method of Borusyak, Jaravel, and Spiess (2021) to account for **spillovers from treated neighbors** without specifying a spillover function.
+
+---
+
+## 🚀 Installation
+
+You can install the development version of `spillimputation` from GitHub using:
+
+```r
+devtools::install_github("your-username/spillimputation")
+
 <h2>Description</h2>
 <p>
 Rather than assuming a specific functional form for spillover exposure, this method estimates the untreated potential outcome 
