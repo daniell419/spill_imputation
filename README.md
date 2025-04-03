@@ -19,7 +19,7 @@ library(spillimputation)
 # Simulate the spillover data
 df_sim <- simulate_spillover_data()
 ```
-The dataset produced by `simulate_panel_data()` is a **balanced panel** of `n_units × n_periods` observations. Each row represents a unit (`id`) observed at a particular time period (`time`). The data is designed to simulate a difference-in-differences (DiD) setup with spillover effects and fixed effects. 
+The dataset produced by `simulate_panel_data()` is a **balanced panel** of `n_units × n_periods` observations. Each row represents a unit (`id`) observed at a particular time period (`time`). The data is designed to simulate a difference-in-differences (DiD) setup with spillover effects and fixed effects. Below, step 3 explains in detail the spillover simulation procedure. The estimator expects the following data formatting:
 
 #### **Columns**
 
@@ -31,8 +31,9 @@ The dataset produced by `simulate_panel_data()` is a **balanced panel** of `n_un
 | `time`        | `integer`| Time period identifier. |
 | `treat_group` | `integer`| Indicator equal to 1 if the unit belongs to the treated group, and 0 otherwise. Treatment starts at the specified `treatment_period` (default is 4). |
 
-### 2) Spill-imputation Function Application
 
+### 2) Spill-imputation Function Application
+The function requeieres the names of the outcome variable, the binary definition of the treated group, a label for the not-exposed cohort, time and id indicators and the value of the treatment time (i.e. 2014, 4, etc). It returns a dataframe of the estimates of the ATOTT and ASEUT by year. 
 ```r
 Spill_results <- spill_imputation(
   data = df_sim,
