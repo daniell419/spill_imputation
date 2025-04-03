@@ -31,7 +31,7 @@ The dataset produced by `simulate_panel_data()` is a **balanced panel** of `n_un
 | `time`        | `integer`| Time period identifier ranging from 1 to `n_periods`. |
 | `treat_group` | `integer`| Indicator equal to 1 if the unit belongs to the treated group (by default, the first half of units), and 0 otherwise. Treatment starts at the specified `treatment_period`. |
 
-<h2>Function Application</h2>
+### 2) Spill-imputation Function Application
 
 ```r
 SpilL_results <- spill_imputation(
