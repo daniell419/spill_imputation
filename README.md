@@ -11,6 +11,27 @@ You can install the development version of `spillimputation` from GitHub using:
 ```r
 devtools::install_github("daniell419/spillimputation")
 ```
+## 🔢 Example
+```r
+library(spillimputation)
+# Simulate the spillover data
+df_sim <- simulate_spillover_data()
+```
+
+### 📄 Simulated Dataset Description
+
+The dataset produced by `simulate_panel_data()` is a **balanced panel** of `n_units × n_periods` observations. Each row represents a unit (`id`) observed at a particular time period (`time`). The data is designed to simulate a difference-in-differences (DiD) setup with spillover effects and fixed effects.
+
+#### **Columns**
+
+| Column        | Type     | Description |
+|---------------|----------|-------------|
+| `y`           | `double` | Simulated outcome variable. It is constructed as a function of unit and time fixed effects, a treatment effect (applied only post-treatment for treated units), spillover effects from treated friends, and random noise. |
+| `not_exposed` | `integer`| Indicator variable equal to 1 if a unit has **zero treated friends** throughout all time periods (i.e., is not exposed to any spillover effects). |
+| `id`          | `integer`| Unique identifier for each unit (e.g., individual, firm, region). |
+| `time`        | `integer`| Time period identifier ranging from 1 to `n_periods`. |
+| `treat_group` | `integer`| Indicator equal to 1 if the unit belongs to the treated group (by default, the first half of units), and 0 otherwise. Treatment starts at the specified `treatment_period`. |
+
 <h2>Description</h2>
 <p>
 Rather than assuming a specific functional form for spillover exposure, this method estimates the untreated potential outcome 
