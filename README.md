@@ -8,9 +8,9 @@ This project simulates a panel dataset for evaluating treatment effects in a dif
 
 We simulate panel data for `N = 500` units over `T = 6` time periods. Half of the units are treated starting in period 4, and each unit has a random number of "friends" who are also treated. The outcome variable is generated with:
 
-- **Individual fixed effects**  
-- **Time fixed effects**  
-- **Treatment effects**  
+- **Individual fixed effects**
+- **Time fixed effects**
+- **Treatment effects**
 - **Spillover effects** from friends (activated only post-treatment)
 
 ---
@@ -20,18 +20,18 @@ We simulate panel data for `N = 500` units over `T = 6` time periods. Half of th
 For unit \\( i \\) in time \\( t \\), the outcome is:
 
 \\[
-Y_{it} = \alpha_i + \lambda_t + \epsilon_{it} + \tau \cdot \text{Treated}_{it} + \gamma \cdot \text{FriendsTreated}_i \cdot \text{Post}_{t}
+Y_{it} = \\alpha_i + \\lambda_t + \\epsilon_{it} + \\tau \\cdot \\text{Treated}_{it} + \\gamma \\cdot \\text{FriendsTreated}_i \\cdot \\text{Post}_{t}
 \\]
 
 Where:
 
-- \\( \alpha_i \\): individual fixed effect (drawn from \\( \mathcal{N}(0, 2^2) \\))  
-- \\( \lambda_t \\): time fixed effect (drawn from \\( \mathcal{N}(0, 1^2) \\))  
-- \\( \epsilon_{it} \\): idiosyncratic error \\( \sim \mathcal{N}(0, 1) \\)  
-- \\( \tau = 5 \\): treatment effect  
-- \\( \gamma = 1 \\): spillover effect per friend treated  
-- \\( \text{Treated}_{it} = 1 \\) if unit is in treated group and \\( t \geq 4 \\)  
-- \\( \text{FriendsTreated}_i \\in \{0, 1, ..., 4\} \\): number of friends treated (random)  
-- \\( \text{Post}_t = 1 \\) if \\( t \geq 4 \\)
+- \\( \\alpha_i \\): individual fixed effect (drawn from \\( \\mathcal{N}(0, 2^2) \\))  
+- \\( \\lambda_t \\): time fixed effect (drawn from \\( \\mathcal{N}(0, 1^2) \\))  
+- \\( \\epsilon_{it} \\): idiosyncratic error \\( \\sim \\mathcal{N}(0, 1) \\)  
+- \\( \\tau = 5 \\): treatment effect  
+- \\( \\gamma = 1 \\): spillover effect per friend treated  
+- \\( \\text{Treated}_{it} = 1 \\) if unit is in treated group and \\( t \\geq 4 \\)  
+- \\( \\text{FriendsTreated}_i \\in \\{0, 1, ..., 4\\} \\): number of friends treated (random)  
+- \\( \\text{Post}_t = 1 \\) if \\( t \\geq 4 \\)
 
 ---
