@@ -15,7 +15,7 @@ You can install the development version of `spillimputation` from GitHub using:
 
 ```r
 devtools::install_github("your-username/spillimputation")
-
+```
 <h2>Description</h2>
 <p>
 Rather than assuming a specific functional form for spillover exposure, this method estimates the untreated potential outcome 
