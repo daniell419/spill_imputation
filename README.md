@@ -13,13 +13,12 @@ devtools::install_github("daniell419/spillimputation")
 library(spillimputation)
 ```
 ## 🔢 Example
+
+### 1) 📄 Simulate a Dataset with spillovers
 ```r
 # Simulate the spillover data
 df_sim <- simulate_spillover_data()
 ```
-
-### 📄 Simulated Dataset Description
-
 The dataset produced by `simulate_panel_data()` is a **balanced panel** of `n_units × n_periods` observations. Each row represents a unit (`id`) observed at a particular time period (`time`). The data is designed to simulate a difference-in-differences (DiD) setup with spillover effects and fixed effects.
 
 #### **Columns**
