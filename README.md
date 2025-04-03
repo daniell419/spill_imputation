@@ -53,7 +53,7 @@ Spill_results$tau_pred  # Difference between predicted and observed outcome
 
 
 
-<h2>Technical Overview</h2>
+<h1>Technical Overview</h1>
 <p>
 Rather than assuming a specific functional form for spillover exposure, this method estimates the untreated potential outcome 
 <span style="font-family:monospace;">Y<sub>it</sub>(0)</span> using a two-way fixed effects regression on never-exposed and not-yet-treated units. 
