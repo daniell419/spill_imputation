@@ -19,9 +19,9 @@ We simulate panel data for `N = 500` units over `T = 6` time periods. Half of th
 
 For unit \\( i \\) in time \\( t \\), the outcome is:
 
-\\[
-Y_{it} = \\alpha_i + \\lambda_t + \\epsilon_{it} + \\tau \\cdot \\text{Treated}_{it} + \\gamma \\cdot \\text{FriendsTreated}_i \\cdot \\text{Post}_{t}
-\\]
+$$
+Y_{it} = \alpha_i + \lambda_t + \epsilon_{it} + \tau \cdot \text{Treated}_{it} + \gamma \cdot \text{FriendsTreated}_i \cdot \text{Post}_{t}
+$$
 
 Where:
 
