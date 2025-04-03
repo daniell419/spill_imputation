@@ -34,7 +34,7 @@ The dataset produced by `simulate_panel_data()` is a **balanced panel** of `n_un
 ### 2) Spill-imputation Function Application
 
 ```r
-SpilL_results <- spill_imputation(
+Spill_results <- spill_imputation(
   data = df,
   yname = "y",
   treated = "treat_group",
@@ -44,16 +44,16 @@ SpilL_results <- spill_imputation(
   treatment_time = 4
 )
 
-SpilL_results$ATOTT     # Treated group effects by time
-SpilL_results$ASEU      # Spillover effects on untreated by time
-SpilL_results$tau_pred  # Difference between predicted and observed outcome
+Spill_results$ATOTT     # Treated group effects by time
+Spill_results$ASEU      # Spillover effects on untreated by time
+Spill_results$tau_pred  # Difference between predicted and observed outcome
 ```
 
 
 
 
 
-<h2>Description</h2>
+<h2>Technical Overview</h2>
 <p>
 Rather than assuming a specific functional form for spillover exposure, this method estimates the untreated potential outcome 
 <span style="font-family:monospace;">Y<sub>it</sub>(0)</span> using a two-way fixed effects regression on never-exposed and not-yet-treated units. 
