@@ -1,7 +1,8 @@
 <h1><code>spill_imputation</code>: Imputation-Based Differences-in-differences Estimator</h1>
 
 This package implements a difference-in-differences estimator that accounts for **spillover effects**. It extends the imputation method from Borusyak, Jaravel, and Spiess (2021) by identifying a subset of **not-exposed** and **not-treated** units to estimate counterfactual untreated and unexposed outcomes. The estimator does not requiere to a-priori know the structure of the spillvoers propagation. 
----
+
+
 
 ## 🚀 Installation
 
