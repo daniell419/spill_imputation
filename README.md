@@ -18,7 +18,7 @@ E[Y<sub>it</sub>(0, 0)] = α<sub>i</sub> + λ<sub>t</sub>
 </pre>
 
 <ul>
-  <li><b>Unit Parallel Trends:</b> Untreated outcomes follow a linear additive model with unit and time fixed effects:</li>
+  <li><b>Identification of a not-treated and not-exposed cohort:</b> Untreated outcomes follow a linear additive model with unit and time fixed effects:</li>
 </ul>
 <p>
 Only a subset of never-exposed units is required for estimation. This method does not require knowledge of the true spillover exposure function.
