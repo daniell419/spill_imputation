@@ -105,40 +105,15 @@ ATOTT = mean(Y<sub>it</sub>(1, S<sub>it</sub>) − Ŷ<sub>it</sub>(0, 0)) for t
 ASEU = mean(Y<sub>it</sub>(0, S<sub>it</sub>) − Ŷ<sub>it</sub>(0, 0)) for untreated but exposed units
 </pre>
 
-<h2>Usage Example</h2>
-<pre><code>
-result <- spill_imputation(
-  data = df,
-  yname = "y",
-  treated = "treat_group",
-  never_name = "not_exposed_group",
-  tname = "time",
-  idname = "id",
-  treatment_time = 4
-)
-
-result$ATOTT     # Treated group effects by time
-result$ASEU      # Spillover effects on untreated
-result$tau_pred  # Residualized outcome
-</code></pre>
 
 <h2>References</h2>
 <ul>
-  <li>Borusyak, Jaravel, and Spiess (2021). “Revisiting Event Study Designs: Robust and Efficient Estimation.”</li>
+  <li>Borusyak, Jaravel, and Spiess (2024). “Revisiting Event Study Designs: Robust and Efficient Estimation.”</li>
+    <li>Lasso, D. (2025). “Spillover Gridlock: Adressing Spillovers in Differences-in-differences.”</li>
 </ul>
-
-<h2>Notes</h2>
-<p>
-This method avoids bias from incorrect spillover mapping assumptions. However, statistical inference may be affected by potential correlation in residuals induced by spillovers.
-</p>
 
 </body>
 </html>
-
-# Simulation: Difference-in-Differences with Spillovers
-
-This project simulates a panel dataset for evaluating treatment effects in a difference-in-differences (DiD) setup with **spillovers from treated neighbors (friends)**. The goal is to allow testing of imputation-based DiD estimators when there are potential violations of the stable unit treatment value assumption (SUTVA), such as spillover effects.
-
 ---
 
 ## 🔢 Simulation Overview
