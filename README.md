@@ -143,7 +143,7 @@ We simulate panel data for `N = 500` units over `T = 6` time periods. Half of th
     $$ 
   </p>
   <p>Where:</p>
-  <ul>
+<ul>
     <li>
       $ \alpha_i $: individual fixed effect 
       (drawn from $ \mathcal{N}(0, 2^2) $)
@@ -167,7 +167,7 @@ We simulate panel data for `N = 500` units over `T = 6` time periods. Half of th
       and $ t \geq 4 $
     </li>
     <li>
-      $ \text{FriendsTreated}_i \in \{0, 1, \dots, 4\} $:
+      $ \text{FriendsTreated}_i \in \{0, 1, \dots, 4\} $: 
       number of friends treated (random)
     </li>
     <li>
