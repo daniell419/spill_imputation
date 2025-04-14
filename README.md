@@ -143,41 +143,31 @@ We simulate panel data for `N = 500` units over `T = 6` time periods. Half of th
     $$ 
   </p>
   <p>Where:</p>
-  
-- **\( y_{it} \)**  
-  The dependent variable representing the outcome of interest for unit *i* at time *t*.
-- **\( \alpha_i \)**  
-  Unit-specific fixed effects capturing all time-invariant characteristics that may influence the outcome. These effects control for unobserved heterogeneity across units.
+  - **&alpha;<sub>i</sub> (Individual Fixed Effect):**  
+  Captures all time-invariant characteristics of unit *i*. These effects are drawn from a normal distribution:  
+  &alpha;<sub>i</sub> &sim; 𝒩(0, 2²).
 
-<ul>
-    <li>
-      $ \alpha_i $: individual fixed effect 
-      (drawn from $ \mathcal{N}(0, 2^2) $)
-    </li>
-    <li>
-      $ \lambda_t $: time fixed effect 
-      (drawn from $ \mathcal{N}(0, 1^2) $)
-    </li>
-    <li>
-      $ \epsilon_{it} $: idiosyncratic error 
-      $ \sim \mathcal{N}(0, 1) $
-    </li>
-    <li>
-      $ \tau = 5 $: treatment effect
-    </li>
-    <li>
-      $ \gamma = 1 $: spillover effect per friend treated
-    </li>
-    <li>
-      $ \text{Treated}_{it} = 1 $ if unit is in the treated group 
-      and $ t \geq 4 $
-    </li>
-    <li>
-      $ \text{FriendsTreated}_i \in \{0, 1, \dots, 4\} $: 
-      number of friends treated (random)
-    </li>
-    <li>
-      $ \text{Post}_t = 1 $ if $ t \geq 4 $
-    </li>
-  </ul>
----
+- **&lambda;<sub>t</sub> (Time Fixed Effect):**  
+  Represents factors that vary over time but are constant across units. These effects are drawn from a normal distribution:  
+  &lambda;<sub>t</sub> &sim; 𝒩(0, 1²).
+
+- **&epsilon;<sub>it</sub> (Idiosyncratic Error):**  
+  The random error term that captures unit- and time-specific shocks or measurement errors. It is assumed to follow:  
+  &epsilon;<sub>it</sub> &sim; 𝒩(0, 1).
+
+- **&tau; (Treatment Effect):**  
+  The coefficient for the direct effect of treatment. In this model, &tau; is set to 5, meaning that the treatment increases the outcome by 5 units for treated units.
+
+- **&gamma; (Spillover Effect per Friend Treated):**  
+  The coefficient that captures the spillover (or indirect) effect, representing the impact of each additional treated friend. Here, &gamma; is set to 1.
+
+- **Treated<sub>it</sub> (Treatment Indicator):**  
+  A binary indicator that is 1 if the unit is in the treated group and the time period is in the post-treatment phase (i.e., *t* &ge; 4), and 0 otherwise.
+
+- **FriendsTreated<sub>i</sub> (Number of Friends Treated):**  
+  A random variable taking values in {0, 1, …, 4} that represents the number of friends treated. This variable captures the network or peer exposure effect.
+
+- **Post<sub>t</sub> (Post-Treatment Indicator):**  
+  A binary variable that is 1 if the current time period is in the post-treatment phase (*t* &ge; 4) and 0 otherwise.
+
+  ---
