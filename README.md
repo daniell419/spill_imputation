@@ -135,23 +135,22 @@ We simulate panel data for `N = 500` units over `T = 6` time periods. Half of th
 
 ---
 
-## 📐 Model Equation
-
-For unit \\( i \\) in time \\( t \\), the outcome is:
-
-$$
-y_{it} = \alpha_i + \lambda_t + \epsilon_{it} + \tau \cdot Treated_{it} + \gamma \cdot FriendsTreated_i \cdot Post_{t}
-$$
-
-Where:
-
-- \\( \\alpha_i \\): individual fixed effect (drawn from \\( \\mathcal{N}(0, 2^2) \\))  
-- \\( \\lambda_t \\): time fixed effect (drawn from \\( \\mathcal{N}(0, 1^2) \\))  
-- \\( \\epsilon_{it} \\): idiosyncratic error \\( \\sim \\mathcal{N}(0, 1) \\)  
-- \\( \\tau = 5 \\): treatment effect  
-- \\( \\gamma = 1 \\): spillover effect per friend treated  
-- \\( \\text{Treated}_{it} = 1 \\) if unit is in treated group and \\( t \\geq 4 \\)  
-- \\( \\text{FriendsTreated}_i \\in \\{0, 1, ..., 4\\} \\): number of friends treated (random)  
-- \\( \\text{Post}_t = 1 \\) if \\( t \\geq 4 \\)
-
+<h2>📐 Model Equation</h2>
+  <p>For unit \( i \) in time \( t \), the outcome is:</p>
+  <p>
+    $$ 
+      y_{it} = \alpha_i + \lambda_t + \epsilon_{it} + \tau \cdot \text{Treated}_{it} + \gamma \cdot \text{FriendsTreated}_i \cdot \text{Post}_{t}
+    $$ 
+  </p>
+  <p>Where:</p>
+  <ul>
+    <li>\( \alpha_i \): individual fixed effect (drawn from \( \mathcal{N}(0, 2^2) \))</li>
+    <li>\( \lambda_t \): time fixed effect (drawn from \( \mathcal{N}(0, 1^2) \))</li>
+    <li>\( \epsilon_{it} \): idiosyncratic error \( \sim \mathcal{N}(0, 1) \)</li>
+    <li>\( \tau = 5 \): treatment effect</li>
+    <li>\( \gamma = 1 \): spillover effect per friend treated</li>
+    <li>\( \text{Treated}_{it} = 1 \) if unit is in treated group and \( t \geq 4 \)</li>
+    <li>\( \text{FriendsTreated}_i \in \{0, 1, \dots, 4\} \): number of friends treated (random)</li>
+    <li>\( \text{Post}_t = 1 \) if \( t \geq 4 \)</li>
+  </ul>
 ---
