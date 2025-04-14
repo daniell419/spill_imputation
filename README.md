@@ -143,6 +143,12 @@ We simulate panel data for `N = 500` units over `T = 6` time periods. Half of th
     $$ 
   </p>
   <p>Where:</p>
+  
+- **\( y_{it} \)**  
+  The dependent variable representing the outcome of interest for unit *i* at time *t*.
+- **\( \alpha_i \)**  
+  Unit-specific fixed effects capturing all time-invariant characteristics that may influence the outcome. These effects control for unobserved heterogeneity across units.
+
 <ul>
     <li>
       $ \alpha_i $: individual fixed effect 
