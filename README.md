@@ -143,35 +143,35 @@ We simulate panel data for `N = 500` units over `T = 6` time periods. Half of th
     $$ 
   </p>
   <p>Where:</p>
-<ul>
+  <ul>
     <li>
-      \( \alpha_i \): individual fixed effect 
-      (drawn from \( \mathcal{N}(0, 2^2) \))
+      $ \alpha_i $: individual fixed effect 
+      (drawn from $ \mathcal{N}(0, 2^2) $)
     </li>
     <li>
-      \( \lambda_t \): time fixed effect 
-      (drawn from \( \mathcal{N}(0, 1^2) \))
+      $ \lambda_t $: time fixed effect 
+      (drawn from $ \mathcal{N}(0, 1^2) $)
     </li>
     <li>
-      \( \epsilon_{it} \): idiosyncratic error 
-      \( \sim \mathcal{N}(0, 1) \)
+      $ \epsilon_{it} $: idiosyncratic error 
+      $ \sim \mathcal{N}(0, 1) $
     </li>
     <li>
-      \( \tau = 5 \): treatment effect
+      $ \tau = 5 $: treatment effect
     </li>
     <li>
-      \( \gamma = 1 \): spillover effect per friend treated
+      $ \gamma = 1 $: spillover effect per friend treated
     </li>
     <li>
-      \( \text{Treated}_{it} = 1 \) if unit is in the treated group 
-      and \( t \geq 4 \)
+      $ \text{Treated}_{it} = 1 $ if unit is in the treated group 
+      and $ t \geq 4 $
     </li>
     <li>
-      \( \text{FriendsTreated}_i \in \{0, 1, ..., 4\} \):
+      $ \text{FriendsTreated}_i \in \{0, 1, \dots, 4\} $:
       number of friends treated (random)
     </li>
     <li>
-      \( \text{Post}_t = 1 \) if \( t \geq 4 \)
+      $ \text{Post}_t = 1 $ if $ t \geq 4 $
     </li>
   </ul>
 ---
