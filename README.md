@@ -107,20 +107,8 @@ Y<sub>it</sub>(d, s) = Y<sub>it</sub>(0, 0) &forall;s &isin; S<sub>i</sub>, &for
 <p>Average Treatment Effect on the Treated (ATOTT):</p>
 The estimated average total treatment effect at time *t* is given by:
 
-<p style="font-size: 1.2em;">
-  &hat;ATOT<sub>t</sub> = 
-  <span style="display:inline-block; vertical-align:middle;">
-    <sup>
-      &Sigma;<sub>j=1, k=1</sub><sup>J,K</sup> d<sup>(j,k)</sup> &middot; &hat;&tau;<sub>t, Total</sub><sup>(j,k)</sup>(1, h)
-    </sup>
-  </span>
-  /
-  <span style="display:inline-block; vertical-align:middle;">
-    <sup>
-      &Sigma;<sub>j=1, k=1</sub><sup>J,K</sup> d<sup>(j,k)</sup>
-    </sup>
-  </span>
-</p>
+  &#x005E;ATOT<sub>t</sub> = (<span style="font-size:1.2em;">&#8721;<sub>j=1, k=1</sub><sup>J, K</sup> d<sup>(j,k)</sup> &middot; &#x005E;&tau;<sub>t, Total</sub><sup>(j,k)</sup>(1, h)</span>)
+
 
 <pre>
 ATOTT = mean(Y<sub>it</sub>(1, S<sub>it</sub>) − Ŷ<sub>it</sub>(0, 0)) for treated units
