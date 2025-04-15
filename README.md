@@ -94,11 +94,14 @@ Y<sub>it</sub>(d, s) = Y<sub>it</sub>(0, 0) &forall;s &isin; S<sub>i</sub>, &for
   <pre>Y<sub>it</sub> = α<sub>i</sub> + λ<sub>t</sub> + ε<sub>it</sub></pre>
   </li>
   <li>Predict counterfactual <span style="font-family:monospace;">Ŷ<sub>it</sub>(0,0)</span> for all units.</li>
-  <li>Compute Individual Treatment Effects: <span style="font-family:monospace;">τ̂<sub>it</sub> = Y<sub>it</sub>(d,s) − Ŷ<sub>it</sub>(0,0)</span></li>
+  <li>Compute Individual Treatment Effects: <span style="font-family:monospace;">τ̂<sub>it</sub>(d,s) = Y<sub>it</sub>(d,s) − Ŷ<sub>it</sub>(0,0)</span></li>
   <li>Aggregate average effects:
     <ul>
-      <li><b>ATOTT:</b> Average treatment effect on treated</li>
-      <li><b>ASEU:</b> Average spillover effect on untreated but exposed</li>
+      <li><b>ATOTT:</b> Average Total effect on the Treated</li>
+      <li><b>ASEU:</b> Average Spillover Effect on Untreated</li>
+    </ul>
+        <ul> *Optional*
+      <li><b>ATT(0):</b> Average Treatment Effect on Treated at Exposure 0</li>
     </ul>
   </li>
 </ol>
