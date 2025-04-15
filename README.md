@@ -121,7 +121,7 @@ ASEU<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> (1-d<sub
 
 <p>Average Treatment Effect on the Treated at exposure 0 (ATT(0)):</p>
 <pre>
-ATT(0)<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> d<sub>i</sub> &middot; &tau;<sub>it, Direct</sub>(1, 0)</span>) /&#8721;<sub>i=1</sub> d<sub>i</sub>
+ATT(0)<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> d<sub>i</sub> &middot; &tau;<sub>it, Direct</sub>(1, 0)</span>) /&#8721;<sub>i=1</sub> d<sub>i</sub> ⋅ 1_{[S_i = 0]}
 </pre>
 <h2>References</h2>
 <ul>
