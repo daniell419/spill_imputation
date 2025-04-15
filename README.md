@@ -67,6 +67,7 @@ These predicted values are subtracted from observed outcomes to recover treatmen
 </p>
 
 <h2>Assumptions</h2>
+Identification of Treatment and Spillover effects requiere the three following assumptions:
 <ul>
   <li><b>Unit Parallel Trends:</b> Untreated outcomes follow a linear additive model with unit and time fixed effects:</li>
 </ul>
@@ -148,7 +149,7 @@ We simulate panel data for `N = 500` units over `T = 6` time periods. Half of th
 ---
 
 <h2>📐 Model Equation</h2>
-  <p>For unit  *i*  in time  *t*, the outcome is:</p>
+  <p>For unit  **i**  in time  **t**, the outcome is:</p>
   <p>
     $$ 
       y_{it} = \alpha_i + \lambda_t + \epsilon_{it} + \tau \cdot \text{Treated}_{it} + \gamma \cdot \text{FriendsTreated}_i \cdot \text{Post}_{t}
