@@ -114,7 +114,7 @@ Y<sub>it</sub>(d, s) = Y<sub>it</sub>(0, 0) &forall;s &isin; S<sub>i</sub>, &for
 ```
 
 <p>Average Spillover Effect on the Untreated (ASEU):</p>
-It excludes the researchers proposed not exposed cohort ($S_i=0$)
+It excludes the researchers proposed not exposed cohort.
 ```math
     \hat{ASEU}_t = \frac{\sum_{i=1} (1-d_i)\cdot{\hat{\tau}_{t, \text{Spill}}^{(i)}(0, s)}}{\sum_{i=1} (1-d_i)}
 ```
@@ -125,9 +125,6 @@ Optional: if the researcher specifies beforehand a group of treated and not expo
     \hat{ATT}(\vec{0})_t = \frac{\sum_{i=1} d_i \cdot {1}[S_i={0}]\cdot{\hat{\tau}_{t, \text{Direct}}^{i}(1, {0})}}{\sum_{i=1} d_{i}\cdot {1}[S_{i}={0}]}
 ```
 
-<pre>
-ATT(0)<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> d<sub>i</sub> &middot; &tau;<sub>it, Direct</sub>(1, 0)</span>) &middot; 1[S<sub>i</sub> = 0] / &#8721;<sub>i=1</sub> d<sub>i</sub>  &middot; 1[S<sub>i</sub> = 0]
-</pre>
 <h2>References</h2>
 <ul>
       <li>Lasso, D. (2025). “Spillover Gridlock: Adressing Spillovers in Differences-in-differences.”</li>
