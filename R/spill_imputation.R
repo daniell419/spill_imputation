@@ -98,7 +98,7 @@ spill_imputation <- function(data, yname, treated, never_name, tname, idname, tr
 
   # ATT(0)
   df_ATT <- df %>%
-    filter(!!sym(treated) == 1 & !!sym(never_name) == 0) %>%
+    filter(!!sym(treated) == 1 & !!sym(never_name) == 1) %>%
     summarize_tau(!!sym(tname))
 
 
