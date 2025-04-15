@@ -149,7 +149,7 @@ We simulate panel data for `N = 500` units over `T = 6` time periods. Half of th
 ---
 
 <h2>📐 Model Equation</h2>
-  For unit  **i**  in time  **t**, the outcome is:
+  For unit  i in time  t, the simulated outcome is:
   <p>
     $$ 
       y_{it} = \alpha_i + \lambda_t + \epsilon_{it} + \tau \cdot \text{Treated}_{it} + \gamma \cdot \text{FriendsTreated}_i \cdot \text{Post}_{t}
