@@ -93,8 +93,8 @@ Y<sub>it</sub>(d, h) = Y<sub>it</sub>(0, 0) &forall;h &isin; H, &forall;d(j,k) &
   <li>Estimate:
   <pre>Y<sub>it</sub> = α<sub>i</sub> + λ<sub>t</sub> + ε<sub>it</sub></pre>
   </li>
-  <li>Predict counterfactual <span style="font-family:monospace;">Ŷ<sub>it</sub>(0)</span> for all units.</li>
-  <li>Compute residuals: <span style="font-family:monospace;">τ̂<sub>it</sub> = Y<sub>it</sub> − Ŷ<sub>it</sub>(0)</span></li>
+  <li>Predict counterfactual <span style="font-family:monospace;">Ŷ<sub>it</sub>(0,0)</span> for all units.</li>
+  <li>Compute Individual Treatment Effects: <span style="font-family:monospace;">τ̂<sub>it</sub> = Y<sub>it</sub>(d,h) − Ŷ<sub>it</sub>(0,0)</span></li>
   <li>Aggregate average effects:
     <ul>
       <li><b>ATOTT:</b> Average treatment effect on treated</li>
