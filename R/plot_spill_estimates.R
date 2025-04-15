@@ -38,5 +38,3 @@ plot_spill_estimates <- function(result, title = "Spillover Imputation Estimates
 
   return(p)
 }
-
-plot_spill_estimates(Spill_results, treatment_time=4)
