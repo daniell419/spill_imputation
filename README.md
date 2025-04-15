@@ -101,7 +101,7 @@ Y<sub>it</sub>(d, s) = Y<sub>it</sub>(0, 0) &forall;s &isin; S<sub>i</sub>, &for
       <li><b>ATOTT:</b> Average Total effect on the Treated</li>
       <li><b>ASEU:</b> Average Spillover Effect on Untreated</li>
     </ul>
-        <ul> <b>Optional<b>
+        <ul> Optional
       <li><b>ATT(0):</b> Average Treatment Effect on Treated at Exposure 0</li>
     </ul>
   </li>
@@ -153,9 +153,6 @@ We simulate panel data for `N = 500` units over `T = 6` time periods. Half of th
 
 ```math
 y_{it} = \alpha_i + \lambda_t + \epsilon_{it} + \tau \cdot \text{Treated}_{it} + \gamma \cdot \text{FriendsTreated}_i \cdot \text{Post}_{t}
-```
-    
-```math
 ```
 
   <p>Where:</p>
