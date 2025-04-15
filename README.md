@@ -114,6 +114,10 @@ The estimated average total treatment effect at time *t* is given by:
 ATOT<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> d<sub>i</sub> &middot; &tau;<sub>it, Total</sub>(1, s)</span>) /&#8721;<sub>i=1</sub> d<sub>i</sub>
 </pre>
 
+```math
+    \hat{ATOT}_t = \frac{\sum_{j=1, k=1}^{J,K} d^{(j,k)}\cdot{\hat{\tau}_{t, \text{Total}}^{(j,k)}(1, h)}}{\sum_{j=1, k=1}^{J,K}d^{(j,k)}}
+```
+
 <p>Average Spillover Effect on the Untreated (ASEU):</p>
 <pre>
 ASEU<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> (1-d<sub>i</sub>) &middot; &tau;<sub>it, Spill</sub>(0, s)</span>) /&#8721;<sub>i=1</sub> (1-d<sub>i</sub>)
