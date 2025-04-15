@@ -106,27 +106,20 @@ Y<sub>it</sub>(d, s) = Y<sub>it</sub>(0, 0) &forall;s &isin; S<sub>i</sub>, &for
   </li>
 </ol>
 
-<h2>Estimator for the Target Estimands</h2>
+<h2>Estimators for the Target Estimands</h2>
 <p>Average Treatment Effect on the Treated (ATOTT):</p>
-The estimated average total treatment effect at time *t* is given by:
-
-<pre>
-ATOT<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> d<sub>i</sub> &middot; &tau;<sub>it, Total</sub>(1, s)</span>) /&#8721;<sub>i=1</sub> d<sub>i</sub>
-</pre>
 
 ```math
     \hat{ATOT}_t = \frac{\sum_{i=1} d_i\cdot{\hat{\tau}_{t, \text{Total}}^{(i)}(1, s)}}{\sum_{i=1} d_i}
 ```
 
 <p>Average Spillover Effect on the Untreated (ASEU):</p>
-<pre>
-ASEU<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> (1-d<sub>i</sub>) &middot; &tau;<sub>it, Spill</sub>(0, s)</span>) /&#8721;<sub>i=1</sub> (1-d<sub>i</sub>)
-</pre>
-
+It excludes the researchers proposed not exposed cohort ($S_i=0$)
 ```math
     \hat{ASEU}_t = \frac{\sum_{i=1} (1-d_i)\cdot{\hat{\tau}_{t, \text{Spill}}^{(i)}(0, s)}}{\sum_{i=1} (1-d_i)}
 ```
 <p>Average Treatment Effect on the Treated at exposure 0 (ATT(0)):</p>
+Optional: if the researcher specifies beforehand a group of treated and not exposed to treatment units, then:
 
 ```math
     \hat{ATT}(\vec{0})_t = \frac{\sum_{i=1} d_i \cdot {1}[S_i={0}]\cdot{\hat{\tau}_{t, \text{Direct}}^{i}(1, {0})}}{\sum_{i=1} d_{i}\cdot {1}[S_{i}={0}]}
