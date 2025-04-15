@@ -123,6 +123,9 @@ ATOT<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> d<sub>i<
 ASEU<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> (1-d<sub>i</sub>) &middot; &tau;<sub>it, Spill</sub>(0, s)</span>) /&#8721;<sub>i=1</sub> (1-d<sub>i</sub>)
 </pre>
 
+```math
+    \hat{ASEU}_t = \frac{\sum_{i=1} (1-d_i)\cdot{\hat{\tau}_{t, \text{Spill}}^{(i)}(0, s)}}{\sum_{i=1} (1-d_i)}
+```
 <p>Average Treatment Effect on the Treated at exposure 0 (ATT(0)):</p>
 <pre>
 ATT(0)<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> d<sub>i</sub> &middot; &tau;<sub>it, Direct</sub>(1, 0)</span>) &middot; 1[S<sub>i</sub> = 0] / &#8721;<sub>i=1</sub> d<sub>i</sub>  &middot; 1[S<sub>i</sub> = 0]
