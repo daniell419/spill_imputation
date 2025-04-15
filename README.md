@@ -61,7 +61,7 @@ plot_spill_estimates(Spill_results, treatment_time=4, title = "Spillover Imputat
 <h1>Technical Overview</h1>
 <p>
 Rather than assuming a specific functional form for spillover exposure, this method estimates the untreated potential outcome 
-<span style="font-family:monospace;">Y<sub>it</sub>(0)</span> for each unit by imputating the time and unit fix effect estimated in 
+<span style="font-family:monospace;">Ŷ<sub>it</sub>(0)</span> for each unit by imputating the time and unit fix effect estimated in 
 a two-way fixed effects regression using only the subset of never-exposed and not-yet-treated units. 
 These predicted values are subtracted from observed outcomes to recover treatment and spillover effects.
 </p>
