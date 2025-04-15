@@ -156,8 +156,8 @@ y_{it} = \alpha_i + \lambda_t + \epsilon_{it} + \tau \cdot \text{Treated}_{it} +
 ```
 
   <p>Where:</p>
-  - **&alpha;<sub>i</sub> (Individual Fixed Effect):**  
-  Captures all time-invariant characteristics of unit *i*. These effects are drawn from a normal distribution:  
+  -&alpha;<sub>i</sub> (Individual Fixed Effect): 
+  Captures all time-invariant characteristics of unit i. These effects are drawn from a normal distribution:  
   &alpha;<sub>i</sub> &sim; 𝒩(0, 2²).
 
 - **&lambda;<sub>t</sub> (Time Fixed Effect):**  
