@@ -115,7 +115,7 @@ ATOT<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> d<sub>i<
 </pre>
 
 ```math
-    \hat{ATOT}_t = \frac{\sum_{j=1, k=1}^{J,K} d^{(j,k)}\cdot{\hat{\tau}_{t, \text{Total}}^{(j,k)}(1, h)}}{\sum_{j=1, k=1}^{J,K}d^{(j,k)}}
+    \hat{ATOT}_t = \frac{\sum_{i=1} d_i\cdot{\hat{\tau}_{t, \text{Total}}^{(i)}(1, s)}}{\sum_{i=1} d_i}
 ```
 
 <p>Average Spillover Effect on the Untreated (ASEU):</p>
