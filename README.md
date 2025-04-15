@@ -115,6 +115,7 @@ Y<sub>it</sub>(d, s) = Y<sub>it</sub>(0, 0) &forall;s &isin; S<sub>i</sub>, &for
 
 <p>Average Spillover Effect on the Untreated (ASEU):</p>
 It excludes the researchers proposed not exposed cohort.
+
 ```math
     \hat{ASEU}_t = \frac{\sum_{i=1} (1-d_i)\cdot{\hat{\tau}_{t, \text{Spill}}^{(i)}(0, s)}}{\sum_{i=1} (1-d_i)}
 ```
