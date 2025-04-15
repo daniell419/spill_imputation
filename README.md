@@ -1,6 +1,6 @@
 <h1><code>spill_imputation</code>: Imputation Differences-in-differences Estimator for Spillovers</h1>
 
-This package implements a difference-in-differences estimator that accounts for **spillover effects**. It extends the imputation method from Borusyak, Jaravel, and Spiess (2021) by identifying a subset of **not-exposed** and **not-treated** units to estimate counterfactual untreated and unexposed outcomes. The estimator does not requiere to a-priori know the structure of the spillvoers propagation. 
+This package implements a difference-in-differences estimator that accounts for **spillover effects**. It extends the imputation method from Borusyak, Jaravel, and Spiess (2021) by identifying a subset of **not-exposed** and **not-treated** units to estimate counterfactual untreated and unexposed outcomes. The estimator does not requiere to a-priori know the structure of the spillovers propagation. 
 
 
 
@@ -105,6 +105,23 @@ Y<sub>it</sub>(d, s) = Y<sub>it</sub>(0, 0) &forall;s &isin; S<sub>i</sub>, &for
 
 <h2>Estimator Equations</h2>
 <p>Average Treatment Effect on the Treated (ATOTT):</p>
+The estimated average total treatment effect at time *t* is given by:
+
+<p style="font-size: 1.2em;">
+  &hat;ATOT<sub>t</sub> = 
+  <span style="display:inline-block; vertical-align:middle;">
+    <sup>
+      &Sigma;<sub>j=1, k=1</sub><sup>J,K</sup> d<sup>(j,k)</sup> &middot; &hat;&tau;<sub>t, Total</sub><sup>(j,k)</sup>(1, h)
+    </sup>
+  </span>
+  /
+  <span style="display:inline-block; vertical-align:middle;">
+    <sup>
+      &Sigma;<sub>j=1, k=1</sub><sup>J,K</sup> d<sup>(j,k)</sup>
+    </sup>
+  </span>
+</p>
+
 <pre>
 ATOTT = mean(Y<sub>it</sub>(1, S<sub>it</sub>) − Ŷ<sub>it</sub>(0, 0)) for treated units
 </pre>
