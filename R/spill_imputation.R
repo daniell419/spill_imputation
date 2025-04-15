@@ -86,20 +86,26 @@ spill_imputation <- function(data, yname, treated, never_name, tname, idname, tr
       rename(period = {{ time_var }})
   }
 
-  # Treated group summary
+  # ATOT
   df_treated <- df %>%
     filter(!!sym(treated) == 1) %>%
     summarize_tau(!!sym(tname))
 
-  # Exposed but untreated summary
+  # ASEUT
   df_untreated <- df %>%
     filter(!!sym(treated) == 0 & !!sym(never_name) == 0) %>%
     summarize_tau(!!sym(tname))
 
+  # ATT(0)
+  df_ATT <- df %>%
+    filter(!!sym(treated) == 1 & !!sym(never_name) == 0) %>%
+    summarize_tau(!!sym(tname))
+
 
   return(list(
-    ATOTT = df_treated,
+    ATOT = df_treated,
     ASEU = df_untreated,
+    ATT = df_ATT,
     tau_pred = df[[tau_name]]
   ))
 }

@@ -16,8 +16,9 @@ plot_spill_estimates <- function(result, title = "Spillover Imputation Estimates
 
   # Add group labels
   df_plot <- bind_rows(
-    result$ATOTT %>% mutate(Estimate = "ATOTT"),
-    result$ASEU %>% mutate(Estimate = "ASEUT")
+    result$ATOT %>% mutate(Estimate = "ATOT"),
+    result$ASEU %>% mutate(Estimate = "ASEUT"),
+    result$ATT %>% mutate(Estimate = "ATT(0)")
   )
 
   # Create ggplot
