@@ -29,11 +29,11 @@ The dataset produced by `simulate_panel_data()` is a **balanced panel** of `n_un
 | `not_exposed` | `integer`| Indicator variable equal to 1 if a unit is unexposed and untreated throughout **all** time periods (i.e., is not exposed to any spillover effects). For units in this group the variable should be 1 for every time  |
 | `id`          | `integer`| Unique identifier for each unit (e.g., individual, firm, region). |
 | `time`        | `integer`| Time period identifier. |
-| `treat_group` | `integer`| Indicator equal to 1 if the unit belongs to the treated group, and 0 otherwise. Treatment starts at the specified `treatment_period` (default is 4). |
+| `treat_group` | `integer`| Indicator equal to 1 if the unit belongs to the treated group, and 0 otherwise. |
 
 
 ### 2) Spill-imputation Function Application
-The function requieres the names of the outcome variable, the binary definition of the treated group, a label for the not-exposed cohort, time and id indicators and the value of the treatment time. It returns a dataframe of the estimates of the ATOTT and ASEUT by year, if there are treated and not exposed units, it also presents the ATT(0). Also, a vector with the individual treatment effects to explore heterogeneity. 
+The function requieres the names of the outcome variable, the binary definition of the treated group, a label for the not-exposed cohort, time and id indicators and the value of the `treatment_period` when treatment starts (default is 4). It returns a dataframe of the estimates of the ATOTT and ASEUT by year, if there are treated and not exposed units, it also presents the ATT(0). Also, a vector with the individual treatment effects to explore heterogeneity. 
 ```r
 Spill_results <- spill_imputation(
   data = df_sim,
