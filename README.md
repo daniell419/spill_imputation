@@ -12,7 +12,7 @@ You can install the development version of `spillimputation` from GitHub using:
 devtools::install_github("daniell419/spill_imputation")
 library(spillimputation)
 ```
-## 🔢 Example
+## 🔢 Usage Example
 
 ### 1) 📄 Simulate a Dataset with spillovers
 ```r
