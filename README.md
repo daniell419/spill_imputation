@@ -107,11 +107,11 @@ Y<sub>it</sub>(d, s) = Y<sub>it</sub>(0, 0) &forall;s &isin; S<sub>i</sub>, &for
 <p>Average Treatment Effect on the Treated (ATOTT):</p>
 The estimated average total treatment effect at time *t* is given by:
 
-  &#x005E;ATOT<sub>t</sub> = (<span style="font-size:1.2em;">&#8721;<sub>j=1, k=1</sub><sup>J, K</sup> d<sup>(j,k)</sup> &middot; &#x005E;&tau;<sub>t, Total</sub><sup>(j,k)</sup>(1, h)</span>)
+ ATOT<sub>t</sub> = (<span style="font-size:1.2em;">&#8721;<sub>j=1, k=1</sub> d<sup>i</sup> &middot; &#x005E;&tau;<sub>t, Total</sub><sup>(j,k)</sup>(1, s)</span>)
 
 
 <pre>
-ATOTT = mean(Y<sub>it</sub>(1, S<sub>it</sub>) − Ŷ<sub>it</sub>(0, 0)) for treated units
+ATOT = mean(Y<sub>it</sub>(1, S<sub>it</sub>) − Ŷ<sub>it</sub>(0, 0)) for treated units
 </pre>
 
 <p>Average Spillover Effect on the Untreated (ASEU):</p>
