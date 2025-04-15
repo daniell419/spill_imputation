@@ -129,7 +129,7 @@ ASEU<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> (1-d<sub
 <p>Average Treatment Effect on the Treated at exposure 0 (ATT(0)):</p>
 
 ```math
-    \hat{ATT}(\vec{0})_t = \frac{\sum_{i=1} d_i \cdot \mathbbm{1}[S_i={0}]\cdot{\hat{\tau}_{t, \text{Direct}}^{i}(1, {0})}}{\sum_{i=1} d_{i}\cdot \mathbbm{1}[S_{i}={0}]}
+    \hat{ATT}(\vec{0})_t = \frac{\sum_{i=1} d_i \cdot {1}[S_i={0}]\cdot{\hat{\tau}_{t, \text{Direct}}^{i}(1, {0})}}{\sum_{i=1} d_{i}\cdot {1}[S_{i}={0}]}
 ```
 
 <pre>
