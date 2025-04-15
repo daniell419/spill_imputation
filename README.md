@@ -19,7 +19,7 @@ library(spillimputation)
 # Simulate the spillover data
 df_sim <- simulate_spillover_data()
 ```
-The dataset produced by `simulate_panel_data()` is a **balanced panel** of `n_units × n_periods` observations. Each row represents a unit (`id`) observed at a particular time period (`time`). The data is designed to simulate a difference-in-differences (DiD) setup with spillover effects, that occur at time t=4. There is a group of untreated and unexposed units denoted by `not_exposed`. Below, step 3 explains in detail the spillover simulation procedure. The estimator expects the following data formatting:
+The dataset produced by `simulate_panel_data()` is a **balanced panel** of `n_units × n_periods` observations. Each row represents a unit (`id`) observed at a particular time period (`time`). The data is designed to simulate a difference-in-differences (DiD) setup with spillover effects, that occur at time t=4. There is a group of untreated and unexposed units denoted by `not_exposed`. Below, the simulation overview explains in detail the spillover simulation procedure. The estimator expects the following data formatting:
 
 #### **Columns**
 
