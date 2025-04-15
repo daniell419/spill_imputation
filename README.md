@@ -125,8 +125,8 @@ ATT(0)<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> d<sub>
 </pre>
 <h2>References</h2>
 <ul>
+      <li>Lasso, D. (2025). “Spillover Gridlock: Adressing Spillovers in Differences-in-differences.”</li>
   <li>Borusyak, Jaravel, and Spiess (2024). “Revisiting Event Study Designs: Robust and Efficient Estimation.”</li>
-    <li>Lasso, D. (2025). “Spillover Gridlock: Adressing Spillovers in Differences-in-differences.”</li>
 </ul>
 
 </body>
