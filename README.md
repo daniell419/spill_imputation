@@ -103,7 +103,7 @@ Y<sub>it</sub>(d, s) = Y<sub>it</sub>(0, 0) &forall;s &isin; S<sub>i</sub>, &for
   </li>
 </ol>
 
-<h2>Estimator Equations</h2>
+<h2>Estimator for the Target Estimands</h2>
 <p>Average Treatment Effect on the Treated (ATOTT):</p>
 The estimated average total treatment effect at time *t* is given by:
 
@@ -113,10 +113,13 @@ ATOT<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> d<sub>i<
 
 <p>Average Spillover Effect on the Untreated (ASEU):</p>
 <pre>
-ASEU = mean(Y<sub>it</sub>(0, S<sub>it</sub>) − Ŷ<sub>it</sub>(0, 0)) for untreated but exposed units
+ASEU<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> (1-d<sub>i</sub>) &middot; &tau;<sub>it, Spill</sub>(0, s)</span>) /&#8721;<sub>i=1</sub> (1-d<sub>i</sub>)
 </pre>
 
-
+<p>Average Treatment Effect on the Treated at exposure 0 (ATT(0)):</p>
+<pre>
+ATT(0)<sub>t</sub> = <span style="font-size:1.2em;">&#8721;<sub>i=1</sub> d<sub>i</sub> &middot; &tau;<sub>it, Direct</sub>(1, 0)</span>) /&#8721;<sub>i=1</sub> d<sub>i</sub>
+</pre>
 <h2>References</h2>
 <ul>
   <li>Borusyak, Jaravel, and Spiess (2024). “Revisiting Event Study Designs: Robust and Efficient Estimation.”</li>
