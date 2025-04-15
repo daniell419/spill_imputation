@@ -78,7 +78,7 @@ E[Y<sub>it</sub>(0, 0)] = α<sub>i</sub> + λ<sub>t</sub>
   <li><b>No anticipation:</b> future treatment assignments and exposures do not affect potential outcomesprior to treatment:</li>
 </ul>
 <pre>
-Y<sub>it</sub>(d, h) = Y<sub>it</sub>(0, 0) &forall;s &isin; S<sub>i</sub>, &forall;d &isin; {0, 1}, &forall;t &lt; t0
+Y<sub>it</sub>(d, s) = Y<sub>it</sub>(0, 0) &forall;s &isin; S<sub>i</sub>, &forall;d &isin; {0, 1}, &forall;t &lt; t0
 
 </pre>
 
@@ -137,7 +137,7 @@ We simulate panel data for `N = 500` units over `T = 6` time periods. Half of th
 ---
 
 <h2>📐 Model Equation</h2>
-  <p>For unit \( i \) in time \( t \), the outcome is:</p>
+  <p>For unit  *i*  in time  *t*, the outcome is:</p>
   <p>
     $$ 
       y_{it} = \alpha_i + \lambda_t + \epsilon_{it} + \tau \cdot \text{Treated}_{it} + \gamma \cdot \text{FriendsTreated}_i \cdot \text{Post}_{t}
